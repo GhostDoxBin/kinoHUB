@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Кинотека - сериалы и мультфильмы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <span class="logo-icon">🎬</span>
+        <span class="logo-text">КиноHUB</span>
+    </div>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 Поиск сериала или мультфильма...">
+    </div>
+</header>
+
+<nav class="genre-filters">
+    <button class="filter-btn active" data-genre="all">Все</button>
+    <button class="filter-btn" data-genre="сериал">Сериалы</button>
+    <button class="filter-btn" data-genre="мультфильм">Мультфильмы</button>
+    <button class="filter-btn" data-genre="боевик">Боевики</button>
+    <button class="filter-btn" data-genre="комедия">Комедии</button>
+    <button class="filter-btn" data-genre="драма">Драмы</button>
+    <button class="filter-btn" data-genre="фантастика">Фантастика</button>
+</nav>
+
+<main class="catalog" id="catalogContainer">
+    <div class="loading">Загрузка контента...</div>
+</main>
+
+<div id="playerModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="player-container">
+            <h2 id="modalTitle"></h2>
+            <div class="video-wrapper">
+                <video id="videoPlayer" controls preload="auto" style="width:100%; border-radius:12px;">
+                    <source id="videoSource" src="" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+            <div class="video-info">
+                <p class="year-rating" id="modalYearRating"></p>
+                <p class="description" id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Кинотека. Учебный проект. Все права защищены.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
